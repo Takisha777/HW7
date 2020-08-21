@@ -8,14 +8,16 @@ const userObj = {
     surname: 'Connor',
     man: true,
     greet: greetFunc()
-}
+    arr: [1, 2, 3, 4, 5]
+};
 const userObj2 = {
     id: 1,
     name: 'Jany',
     age: 10,
     man: false,
-    greet: greetFunc()
-}
+    greet: greetFunc(),
+    arr: [6, 7, 8, 9, 1]
+};
 function greetFunc() {
     return arguments;
 }
