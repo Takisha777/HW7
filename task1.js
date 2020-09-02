@@ -1,7 +1,6 @@
 // 1. Создать 2 объекта с различными полями.
 //     Написать код, который переберёт оба объекта и сконкатениурет все поля-массивы.
 //     Посчитать сумму чисельных элементов в массивах.
-debugger;
 const userObj = {
     name: 'John',
     age: 7,
@@ -25,13 +24,12 @@ let tempNumber = 0;
 let  userObj3 = [];
 
 function myFunc(a) {
-    debugger;
     for (let key in a){
         if (Array.isArray(a[key])){
             for (let l = 0; l < a[key].length; l++){
                 userObj3.push(a[key][l]);
                 console.log(typeof a[key][l]);
-                if (typeof a[key][l] === 'number' &&  a[key][l] === 'NaN'){
+                if (typeof a[key][l] === 'number' &&  !isNaN(a[key][l])){
                     tempNumber += a[key][l];
                 }
             }
@@ -44,5 +42,5 @@ function concObject (a, b){
     myFunc(b);
     return tempNumber;
 }
-document.writeln(concObject(userObj, userObj2));
+document.writeln(concObject(userObj, userObj2) + '<br>');
 document.writeln(userObj3);
